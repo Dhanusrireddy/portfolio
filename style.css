@@ -328,27 +328,163 @@ button:hover{
 .project-links a:hover{
     background:#0284c7;
     transform:scale(1.05);
-}#theme-toggle{
-    background:#38bdf8;
-    border:none;
-    color:white;
-    padding:10px 15px;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:18px;
 }
 
-.light-mode{
+
+const text = [
+    "Computer Science Student",
+    "Full Stack Developer",
+    "Python Developer",
+    "AI & Data Science Student"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+
+    if (count === text.length) {
+        count = 0;
+    }
+
+    currentText = text[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typing").textContent = letter;
+
+    if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1200);
+    } else {
+        setTimeout(type, 100);
+    }
+
+})();.project-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.project-card{
+    width:320px;
+    background:#1f2937;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.project-links{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}.project-container{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch;
+    flex-wrap: wrap !important;
+    gap: 30px !important;
+}
+
+.project-card{
+    width: 300px !important;
+    margin: 0 !important;
+}.project-container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card{
+    width: 320px;
+    background: #1f2937;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.project-links{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.project-links a{
+    text-decoration: none;
+    background: #38bdf8;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.project-links a:hover{
+    background: #0284c7;
+    transform: scale(1.05);
+}.projects h2{
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}.light-mode{
     background:#f8fafc;
     color:#111827;
 }
 
-.light-mode header{
-    background:white;
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode p,
+.light-mode a,
+.light-mode li,
+.light-mode span{
+    color:#111827;
 }
 
 .light-mode .project-card,
-.light-mode .certificate-card{
-    background:#e5e7eb;
+.light-mode .certificate-card,
+.light-mode .contact-info,
+.light-mode .contact-form{
+    background:#ffffff;
     color:#111827;
+    border:1px solid #d1d5db;
+}
+
+.light-mode input,
+.light-mode textarea{
+    background:#ffffff;
+    color:#111827;
+    border:1px solid #d1d5db;
+}
+
+.light-mode header{
+    background:#ffffff;
+}
+
+.light-mode .nav-links a{
+    color:#111827;
+}
+
+.light-mode .logo{
+    color:#0284c7;
+}.footer{
+    background:#0f172a;
+    color:#ffffff;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    border-top:2px solid #38bdf8;
+}
+
+.footer p{
+    margin:0;
+    font-size:16px;
 }
