@@ -487,4 +487,19 @@ let letter = "";
 .footer p{
     margin:0;
     font-size:16px;
+}.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#38bdf8;
+    color:white !important;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+    transform:scale(1.05);
 }
